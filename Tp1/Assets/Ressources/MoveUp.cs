@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,4 +11,3 @@ public class MoveUp : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = Vector3.up * _speed;
     }
 }
-*/
