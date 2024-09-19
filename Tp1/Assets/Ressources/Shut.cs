@@ -23,7 +23,7 @@ public class Shut : MonoBehaviour
 
 
         //recupere la postiion du space ship
-        Vector3 ShipPosition = Ship.transform.position + Ship.transform.up * 1.0f;
+        Vector3 ShipPosition = Ship.position + Ship.up * 1.0f;
         MoveUp myNewObject = Instantiate(_prefabInstantiate, ShipPosition, Quaternion.Euler(0, 0, 180), _LaserBalle);
         myNewObject.InitializeVelocity();
         Destroy(myNewObject.gameObject, 6f);
