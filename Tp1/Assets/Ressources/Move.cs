@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    [SerializeField] private float _speed = 1;
-    [SerializeField] private float _angle = 20;
+    [SerializeField] private float _acceleration = 1f;
+    [SerializeField] private float _angle = 30f;
+    [SerializeField] private float _MaxSpeed = 3f;
     private Vector2 _position;
+    private float _speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,17 +19,24 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        // Avancer vers l'avant (vers la droite dans Unity 2D) quand on appuie sur W
+        // Avancer vers l'avant quand on appuie sur W
         if (Input.GetKey(KeyCode.W))
         {
+            _speed += _acceleration * Time.deltaTime;
+            if (_speed >= _MaxSpeed) { 
+                _speed = _MaxSpeed;
+            }
             transform.position += transform.up * _speed * Time.deltaTime;
         }
 
         // S'arrêter quand on appuie sur S
         if (Input.GetKey(KeyCode.S))
         {
-            // Le vaisseau ne bouge plus, donc on ne change rien à la position.
-            // Cette ligne peut être laissée vide si tu veux juste arrêter le mouvement.
+            _speed -= _acceleration * Time.deltaTime;
+            if (_speed <=0)
+            {
+                _speed = 0;
+            }
         }
 
         // Tourner dans le sens anti-horaire quand on appuie sur A

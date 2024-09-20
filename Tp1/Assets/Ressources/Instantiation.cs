@@ -12,7 +12,6 @@ public class Instantiation : MonoBehaviour
     // Position maximum sur l'axe y
     public int _yMin = 2;     // Position minimum sur l'axe Y
     public int _yMax = 7;      // Position maximum sur l'axe Y
-    // Start is called before the first frame update
     void Start()
     {
        
