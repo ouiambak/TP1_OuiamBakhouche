@@ -11,6 +11,7 @@ public class Shut : MonoBehaviour
     [SerializeField] private float _delay = 1f;
     [SerializeField] private float _delayToDestroy = 6f;
     private float _timer;
+    private int _VaisseauDead;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class Shut : MonoBehaviour
         MoveUp myNewObject = Instantiate(_prefabInstantiate, ShipPosition, Shiprotation, _LaserBalle);
         myNewObject.InitializeVelocity();
         Destroy(myNewObject.gameObject, _delayToDestroy);
+        
     }
     void Update()
     {
