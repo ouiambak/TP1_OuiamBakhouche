@@ -4,8 +4,9 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Rotate : MonoBehaviour
-{   [SerializeField] private float _angle = 50f;
-    [SerializeField] private float _speed = 3f;
+{   [SerializeField] private float _MAXangle = 50f;
+    [SerializeField] private float _offset = 120f;
+    [SerializeField] private float _speed = 10f;
     private float _orientation;
     // Start is called before the first frame update
 
@@ -17,22 +18,7 @@ public class Rotate : MonoBehaviour
     }
     void RotateObject()
     {
-        _orientation = transform.eulerAngles.z;
-        if (_orientation >= -100 && _orientation <= 50)
-        {   // Appliquer la rotation
-            transform.Rotate(0, 0, _angle * Time.deltaTime*_speed); 
-        }
-
-            // Si l'angle dépasse -50 degrés
-        if (_orientation < -100)
-        {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z+_angle);
-        }
-
-            // Si l'angle dépasse 50 degrés
-        if (_orientation > 50)
-        {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - _angle);
-        }
+        float angleZ = Mathf.PingPong(Time.time * _speed, _MAXangle * 2) - _MAXangle+_offset;
+        transform.eulerAngles = new Vector3(0, 0, angleZ);
     }
 }

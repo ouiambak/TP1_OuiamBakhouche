@@ -10,4 +10,5 @@ public class GoRight : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = Vector3.left * _speed;
     }
+   
 }
