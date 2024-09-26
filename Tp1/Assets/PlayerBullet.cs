@@ -6,16 +6,15 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     [SerializeField] GameObject Balle;
-    [SerializeField] GameObject vaisseau;
     [SerializeField] private TextMeshProUGUI _text;
     private int died = 0;
     private void OnTriggerEnter2D(Collider2D collision)
-    {   EnemyShip ship = collision.GetComponent<EnemyShip>();
+    {   EnemyShip vaisseau = collision.GetComponent<EnemyShip>();
 
-        if (ship != null)
+        if (vaisseau != null)
         {
             Debug.Log("Collision détectée ");
-            Destroy(ship.gameObject);
+            Destroy(vaisseau.gameObject);
             died++;
             Destroy(this.gameObject);
         }
