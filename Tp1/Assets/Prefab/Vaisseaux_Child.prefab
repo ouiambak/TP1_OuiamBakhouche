@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2828214022259706847}
   - component: {fileID: -6238544029860216782}
   - component: {fileID: 1328515259155445530}
-  - component: {fileID: 8927295808059416414}
+  - component: {fileID: 8893481096678337353}
   m_Layer: 0
   m_Name: Vaisseaux_Child
-  m_TagString: Untagged
+  m_TagString: Vaisseaux
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.62, y: 3.57}
   m_EdgeRadius: 0
---- !u!114 &8927295808059416414
+--- !u!114 &8893481096678337353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

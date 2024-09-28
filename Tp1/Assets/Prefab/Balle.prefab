@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6338198031007757852}
   - component: {fileID: 7640572620154071003}
   - component: {fileID: 4578950057152022281}
-  - component: {fileID: 6426025863730699760}
+  - component: {fileID: 3679274825707242426}
   m_Layer: 0
   m_Name: Balle
   m_TagString: Untagged
@@ -180,7 +180,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6426025863730699760
+--- !u!114 &3679274825707242426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,5 +192,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1d89db1f97c86459c022d6e74107f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Balle: {fileID: 1711160740499783763, guid: fffceabb76f863a4197ce480b07607b4, type: 3}
-  _text: {fileID: 0}
+  Balle: {fileID: 5340953031752873571}
+  counter: {fileID: 0}
